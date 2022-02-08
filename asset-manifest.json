@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ololosh-tralevich/goit-react-hw-01-components/static/css/main.7acaea2f.css",
-    "main.js": "/ololosh-tralevich/goit-react-hw-01-components/static/js/main.76153464.js",
-    "static/js/787.6b7abe35.chunk.js": "/ololosh-tralevich/goit-react-hw-01-components/static/js/787.6b7abe35.chunk.js",
+    "main.js": "/ololosh-tralevich/goit-react-hw-01-components/static/js/main.489d55b5.js",
+    "static/js/787.84e13687.chunk.js": "/ololosh-tralevich/goit-react-hw-01-components/static/js/787.84e13687.chunk.js",
     "index.html": "/ololosh-tralevich/goit-react-hw-01-components/index.html",
     "main.7acaea2f.css.map": "/ololosh-tralevich/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
-    "main.76153464.js.map": "/ololosh-tralevich/goit-react-hw-01-components/static/js/main.76153464.js.map",
-    "787.6b7abe35.chunk.js.map": "/ololosh-tralevich/goit-react-hw-01-components/static/js/787.6b7abe35.chunk.js.map"
+    "main.489d55b5.js.map": "/ololosh-tralevich/goit-react-hw-01-components/static/js/main.489d55b5.js.map",
+    "787.84e13687.chunk.js.map": "/ololosh-tralevich/goit-react-hw-01-components/static/js/787.84e13687.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.76153464.js"
+    "static/js/main.489d55b5.js"
   ]
 }
