@@ -1,12 +1,11 @@
 import styles from './firstTask.module.css';
 import userData from './user.json';
-
-// console.log(userData)
+import PropTypes from 'prop-types';
 
 const FirstTask = () => {
   return (
     <div className={styles.mainSection}>
-      <img src={userData.avatar} width="100px" alt='User Avatar'></img>
+      <img src={userData.avatar} width="100px" alt="User Avatar"></img>
       <h2>{userData.username}</h2>
       <h3>@{userData.tag}</h3>
       <h3>{userData.location}</h3>
@@ -27,8 +26,23 @@ const FirstTask = () => {
     </div>
   );
 };
+
 export default FirstTask;
 
-// FirstTask.defaultProps = {
-//   userData: []
-// }
+FirstTask.defaultProps = {
+  userData: {},
+};
+
+FirstTask.propTypes = {
+  userData: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
+  }),
+};

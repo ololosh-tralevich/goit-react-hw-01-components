@@ -4,7 +4,7 @@ import styles from './fourthTask.module.css';
 const FourthTask = () => {
   let transactions = transactionsData.map(item => {
     return (
-      <tr className={styles.tableColumn}>
+      <tr key={item.id} className={styles.tableColumn}>
         <td className={styles.tableData}>{item.type}</td>
         <td className={styles.tableData}>{item.amount}</td>
         <td className={styles.tableData}>{item.currency}</td>
