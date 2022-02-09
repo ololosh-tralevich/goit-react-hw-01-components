@@ -4,7 +4,7 @@ import statsData from './data.json';
 let randomColor = '';
 
 const secondTask = () => {
-  let partOfCode = statsData.map(item => {
+  const partOfCode = statsData.map(item => {
     getRandomColor();
 
     return (
