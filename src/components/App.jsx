@@ -1,17 +1,13 @@
+import FirstTask from './first_task/FirstTask';
+import SecondTask from './second_task/secondTask';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        color: '#010101',
-      }}
-    >
-     TEST
-    </div>
+    <>
+      <FirstTask />
+      <SecondTask />
+    </>
   );
 };
+
+// export default App;
