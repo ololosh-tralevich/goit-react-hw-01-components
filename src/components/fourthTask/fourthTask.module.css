@@ -1,0 +1,31 @@
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  box-shadow: 0px 0px 16px 7px rgba(34, 60, 80, 0.27);
+}
+
+.transactionsTable {
+  width: 100%;
+  border-radius: 20px;
+}
+
+thead {
+  background-color: rgba(0, 140, 255, 0.438);
+  height: 50px;
+}
+
+.tableColumn {
+  height: 40px;
+  font-size: 18px;
+}
+
+.tableData {
+  text-align: center;
+  padding: 0;
+}
+
+.tableColumn:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.527);
+}
