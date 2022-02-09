@@ -1,10 +1,10 @@
 import styles from './secondTask.module.css';
-import statsData from './data.json';
+import PropTypes from "prop-types";
 
 let randomColor = '';
 
-const secondTask = () => {
-  const partOfCode = statsData.map(item => {
+const SecondTask = ({stats}) => {
+  const partOfCode = stats.map(item => {
     getRandomColor();
 
     return (
@@ -23,7 +23,19 @@ const secondTask = () => {
   );
 };
 
-export default secondTask;
+SecondTask.defaultProps = {
+    stats: [],
+}
+
+SecondTask.propTypes = {
+    stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
+    }))
+}
+
+export default SecondTask;
 
 function getRandomColor() {
   randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;

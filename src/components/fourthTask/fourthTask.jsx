@@ -1,8 +1,8 @@
-import transactionsData from './transactions.json';
+import PropTypes from "prop-types";
 import styles from './fourthTask.module.css';
 
-const FourthTask = () => {
-  let transactions = transactionsData.map(item => {
+const FourthTask = ({transactions}) => {
+  let partOfCode = transactions.map(item => {
     return (
       <tr key={item.id} className={styles.tableColumn}>
         <td className={styles.tableData}>{item.type}</td>
@@ -21,10 +21,23 @@ const FourthTask = () => {
             <th>Currency</th>
           </tr>
         </thead>
-        <tbody>{transactions}</tbody>
+        <tbody>{partOfCode}</tbody>
       </table>
     </div>
   );
 };
+
+FourthTask.defaultProps = {
+    transactions: [],
+};
+
+FourthTask.propTypes = {
+    transactions: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.string.isRequired,
+        currency: PropTypes.string.isRequired,
+    }))
+}
 
 export default FourthTask;
