@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import styles from './transactionHistory.module.css';
 
-const TransactionHistory = ({transactions}) => {
-  let partOfCode = transactions.map(item => {
+const TransactionHistory = ({items}) => {
+  let partOfCode = items.map(item => {
     return (
       <tr key={item.id} className={styles.tableColumn}>
         <td className={styles.tableData}>{item.type}</td>
@@ -28,11 +28,11 @@ const TransactionHistory = ({transactions}) => {
 };
 
 TransactionHistory.defaultProps = {
-    transactions: [],
+    items: [],
 };
 
 TransactionHistory.propTypes = {
-    transactions: PropTypes.arrayOf(PropTypes.shape({
+    items: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
         amount: PropTypes.string.isRequired,
