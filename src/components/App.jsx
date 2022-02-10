@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <>
       <Profile {...dataProfile}/>
-      <Statistics stats={dataStatistics}/>
+      <Statistics title="Upload stats" stats={dataStatistics}/>
       <FriendList friends={dataFriends}/>
       <TransactionHistory transactions={dataTransactions}/>
     </>
