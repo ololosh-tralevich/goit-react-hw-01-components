@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
-import styles from './fourthTask.module.css';
+import styles from './transactionHistory.module.css';
 
-const FourthTask = ({transactions}) => {
+const TransactionHistory = ({transactions}) => {
   let partOfCode = transactions.map(item => {
     return (
       <tr key={item.id} className={styles.tableColumn}>
@@ -27,11 +27,11 @@ const FourthTask = ({transactions}) => {
   );
 };
 
-FourthTask.defaultProps = {
+TransactionHistory.defaultProps = {
     transactions: [],
 };
 
-FourthTask.propTypes = {
+TransactionHistory.propTypes = {
     transactions: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
@@ -40,4 +40,4 @@ FourthTask.propTypes = {
     }))
 }
 
-export default FourthTask;
+export default TransactionHistory;

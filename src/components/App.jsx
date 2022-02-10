@@ -1,7 +1,7 @@
-import FirstTask from './first_task/FirstTask';
-import FourthTask from './fourthTask/fourthTask';
-import SecondTask from './second_task/secondTask';
-import ThirdTask from './third_task/thirdTask';
+import Profile from './profile/profile';
+import Statistics from './statistics/statistics';
+import FriendList from './friendList/friendList';
+import TransactionHistory from './transactionHistory/transactionHistory';
 
 import dataProfile from './data/user.json'
 import dataStatistics from './data/data.json'
@@ -11,10 +11,10 @@ import dataTransactions from './data/transactions.json'
 export const App = () => {
   return (
     <>
-      <FirstTask {...dataProfile}/>
-      <SecondTask stats={dataStatistics}/>
-      <ThirdTask friends={dataFriends}/>
-      <FourthTask transactions={dataTransactions}/>
+      <Profile {...dataProfile}/>
+      <Statistics stats={dataStatistics}/>
+      <FriendList friends={dataFriends}/>
+      <TransactionHistory transactions={dataTransactions}/>
     </>
   );
 };

@@ -1,7 +1,7 @@
-import styles from './thirdTask.module.css';
+import styles from './friendList.module.css';
 import PropTypes from 'prop-types';
 
-const ThirdTask = ({ friends }) => {
+const FriendList = ({ friends }) => {
   const partOfCode = friends.map(friend => {
     let isOnlineIndicator = 'red';
     if (friend.isOnline) {
@@ -31,11 +31,11 @@ const ThirdTask = ({ friends }) => {
   );
 };
 
-ThirdTask.defaultProps = {
+FriendList.defaultProps = {
   friends: [],
 };
 
-ThirdTask.propTypes = {
+FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.shape({
       avatar: PropTypes.string.isRequired,
@@ -46,4 +46,4 @@ ThirdTask.propTypes = {
   ),
 };
 
-export default ThirdTask;
+export default FriendList;

@@ -1,9 +1,9 @@
-import styles from './secondTask.module.css';
+import styles from './statistics.module.css';
 import PropTypes from "prop-types";
 
 let randomColor = '';
 
-const SecondTask = ({stats}) => {
+const Statistics = ({stats}) => {
   const partOfCode = stats.map(item => {
     getRandomColor();
 
@@ -23,11 +23,11 @@ const SecondTask = ({stats}) => {
   );
 };
 
-SecondTask.defaultProps = {
+Statistics.defaultProps = {
     stats: [],
 }
 
-SecondTask.propTypes = {
+Statistics.propTypes = {
     stats: PropTypes.arrayOf(PropTypes.shape({
         id: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
@@ -35,7 +35,7 @@ SecondTask.propTypes = {
     }))
 }
 
-export default SecondTask;
+export default Statistics;
 
 function getRandomColor() {
   randomColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`;

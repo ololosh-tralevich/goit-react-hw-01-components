@@ -1,7 +1,7 @@
-import styles from './firstTask.module.css';
+import styles from './profile.module.css';
 import PropTypes from 'prop-types';
 
-const FirstTask = ({ username, tag, location, avatar, stats }) => {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div className={styles.mainSection}>
       <img src={avatar} width="100px" alt="User Avatar"></img>
@@ -30,7 +30,7 @@ const FirstTask = ({ username, tag, location, avatar, stats }) => {
 //   userData: [],
 // };
 
-FirstTask.propTypes = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
@@ -42,4 +42,4 @@ FirstTask.propTypes = {
   }),
 };
 
-export default FirstTask;
+export default Profile;
