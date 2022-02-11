@@ -26,9 +26,6 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
-// FirstTask.defaultProps = {
-//   userData: [],
-// };
 
 Profile.propTypes = {
   username: PropTypes.string.isRequired,

@@ -2,7 +2,6 @@ import styles from './statistics.module.css';
 import PropTypes from 'prop-types';
 
 let randomColor = '';
-let titleCode = '';
 
 const Statistics = ({ title, stats }) => {
   const partOfCode = stats.map(item => {
@@ -20,20 +19,15 @@ const Statistics = ({ title, stats }) => {
     );
   });
 
-  if (title !== '') {
-    titleCode = <h2>{title}</h2>;
-  }
-
   return (
     <div className={styles.mainSection}>
-      {titleCode}
+      {title && <h2>{title}</h2>}
       <ul className={styles.mainSectionList}>{partOfCode}</ul>
     </div>
   );
 };
 
 Statistics.defaultProps = {
-  title: '',
   stats: [],
 };
 
